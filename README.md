@@ -1,4 +1,4 @@
-# git-jira-action
+# jira-sync-closed-action
 
 ## Requirements
 
