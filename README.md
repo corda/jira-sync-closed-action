@@ -1,5 +1,7 @@
 # jira-sync-closed-action
 
+This is a github action step implementation to synchronize closed issues in jira and github, written in js.
+
 ## Requirements
 
 This action step requires the first issue comment to be a linking one between github and jira issues, 
