@@ -41,7 +41,6 @@ async function getSanitizedRepo(rawRepo) {
 
 async function operateForIssue(owner, repo, issue, token, jiraBaseUrl, jiraToken) {
     const issueFirstComment = await new GetFirstIssueCommentAction(owner, repo, issue, token).execute();
-    console.log('First commit message: ' + issueFirstComment);
 
     if (!(/^Automatically created Jira issue: [A-Z]+-\d+/.test(issueFirstComment))) {
         return;
@@ -62,7 +61,7 @@ async function getJiraIssueStatus(jiraBaseUrl, jiraIssue, jiraToken) {
         jiraIssue,
         jiraToken
     ).execute()
-    //console.log('Jira issue retrieved:\n');
+    console.log(`Jira issue ${jiraIssue} retrieved`);
     //console.log(issue);
     //console.log('\n');
     const issueStatus = issue.fields.status.name;
